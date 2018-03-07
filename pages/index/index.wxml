@@ -1,0 +1,44 @@
+<view>
+  <view wx:if="{{showPiggy}}" class='piggy piggy-walk' bindtap='onShowChicken'>
+  </view>
+  <view class='texts' wx:if="{{showPiggy}}">
+    <text wx:if="{{toggleTimes < 1}}">一只小猪猪在走...</text>
+    <text wx:if="{{toggleTimes >= 1}}">小猪猪{{appendingWord}}在走...</text>
+  </view>
+    <view wx:if="{{showChicken}}" class='chicken chicken-walk' bindtap='onShowPiggy'>
+  </view> 
+  <view class='texts'  wx:if="{{showChicken}}">
+    <text wx:if="{{toggleTimes < 1}}">一只大公鸡也在走...</text>
+    <text wx:if="{{toggleTimes >= 1}}">大公鸡也{{appendingWord}}在走...</text>
+  </view>
+
+  <view class='texts' wx:if="{{toggleTimes > 5 && toggleTimes < 9}}">
+  (。・∀・)ノ゛ 
+  </view>
+
+  <view class='texts' wx:if="{{toggleTimes >= 9 && toggleTimes < 14}}">
+  (･ω-｡) 
+  </view>
+
+  <view class='texts' wx:if="{{toggleTimes >= 14 && toggleTimes < 21}}">
+ （´・ω・｀）
+  </view>
+
+  <view class='texts' wx:if="{{toggleTimes >= 21 && toggleTimes < 27}}">
+ （＾ε＾） 
+  </view>
+
+  <view class='texts' wx:if="{{toggleTimes >= 27 && toggleTimes < 34}}">
+  （＞△＜） 
+  </view>
+
+  <view class='texts' wx:if="{{toggleTimes > 34}}">
+  _(:з」∠)_  您怎么可以这么无聊
+  </view>
+
+   <view class='texts' wx:if="{{toggleTimes > 100}}">
+  _(:з」∠)_  _(:з」∠)_  _(:з」∠)_  _(:з」∠)_  你赢了！
+  </view>
+</view>
+
+
